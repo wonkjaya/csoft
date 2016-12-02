@@ -1,0 +1,122 @@
+<div class="promo-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo1">
+                    <i class="fa fa-refresh"></i>
+                    <p>Full Support</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo2">
+                    <i class="fa fa-truck"></i>
+                    <p>Free Update</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo3">
+                    <i class="fa fa-lock"></i>
+                    <p>Secure Network</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo4">
+                    <i class="fa fa-gift"></i>
+                    <p>Low Cost Upgrade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End promo area -->
+    
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-product">
+                    <h2 class="section-title">Latest Products</h2>
+                    <div class="product-carousel">
+                        <div class="row">
+                            <div class="single-product col-md-3 col-xs-4" 
+                                 style="margin-bottom: 20px" 
+                                 ng-repeat="i in products">
+                                <div class="product-f-image text-center" ng-init="img=imgUrl + i.image1">
+                                    <img loaderimg ll-src="{{ img }}" alt="">
+                                    <div class="product-hover hidden-xs">
+                                        <a href="#/product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link">
+                                            <i class="fa fa-shopping-cart"></i> 
+                                            <span class="hidden-xs">Add to cart</span>
+                                        </a>
+                                        <a href="#/product/{{i.ID}}/{{i.slug}}.html" 
+                                            class="view-details-link">
+                                            <i class="fa fa-link"></i> 
+                                            <span class="hidden-xs">See details</span>
+                                        </a>
+                                    </div>
+                                    <div class="product-hover visible-xs">
+                                        <a href="#/product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link xs">
+                                            <i class="fa fa-shopping-cart"></i> 
+                                        </a>
+                                        <a href="#/product/{{i.ID}}/{{i.slug}}.html" class="add-to-cart-link xs view" 
+                                            style="margin-right:40px">
+                                            <i class="fa fa-link"></i> 
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <h2><a href="#/product/{{i.ID}}/{{i.slug}}.html">{{i.nama_produk}}</a></h2>
+                                
+                                <div class="product-carousel-price">
+                                    <ins>{{i.harga_jual | currency: "Rp " : 0}}</ins> 
+                                    <del>{{i.harga_jual | currency: "Rp " : 0}}</del>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="col-md-12">
+                <hr/>
+                <div class="latest-product">
+                    <h2 class="section-title">Software In Progress</h2>
+                    <div class="product-carousel">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img src="assets/img/example.png" alt="" style="width:150px">
+                            </div>
+                            <div class="col-md-7">
+                                <h2>Software kas sekolah</h2>
+                                <hr/>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                    <span class="sr-only">45% Complete</span>
+                                  </div>
+                                </div>
+                                <button class="btn btn-warning btn-xs">More Info</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img src="assets/img/example.png" alt="" style="width:150px">
+                            </div>
+                            <div class="col-md-7">
+                                <h2>Sistem Akademik</h2>
+                                <hr/>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                    <span class="sr-only">45% Complete</span>
+                                  </div>
+                                </div>
+                                <button class="btn btn-warning btn-xs">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End main content area -->
