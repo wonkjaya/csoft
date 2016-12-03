@@ -1,3 +1,4 @@
+.font-white{color:#fff;}
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -418,7 +419,8 @@ z-index: 999;}
   text-decoration: none;border-color: #444;
 }
 .product-carousel-price ins {
-  color: #5a88ca;
+  /* color: #5a88ca; */
+  color: #fff;
   font-weight: 700;
   margin-right: 5px;
   text-decoration: none;
