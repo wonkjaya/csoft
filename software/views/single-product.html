@@ -5,11 +5,13 @@
             <div class="col-md-4">
                 <div class="single-sidebar">
                     <h2 class="sidebar-title">Products</h2>
-                    <div class="thubmnail-recent" ng-repeat="i in [1,2,3,4]">
-                        <img src="assets/img/example.png" class="recent-thumb" alt="">
-                        <h2><a href="">Sony Smart TV - 201{{i}}</a></h2>
+                    <div class="thubmnail-recent" ng-repeat="sp in sideProducts" 
+                        ng-init="img=(sp.image1)?imgUrl + sp.image1: imgUrl + 'no-image.png'">
+                        <img loaderimg ll-src="{{ img }}" class="recent-thumb" alt="malangsoftware_{{sp.slug}}">
+                        <h2><a href="">{{sp.nama_produk}}</a></h2>
                         <div class="product-sidebar-price">
-                            <ins>$700.00</ins> <del>$100.00</del>
+                            <ins>{{sp.harga_jual | currency: "Rp " : 0}}</ins> 
+                            <del>{{sp.harga_jual | currency: "Rp " : 0}}</del>
                         </div>                             
                     </div>
                 </div>
@@ -17,17 +19,17 @@
                 <div class="single-sidebar">
                     <h2 class="sidebar-title">Recent Posts</h2>
                     <ul>
-                        <li ng-repeat="i in [1,2,3,4]"><a href="">Sony Smart TV - 2015 - {{i}}</a></li>
+                        <li ng-repeat="i in [1,2,3,4]"><a href="">....</a></li>
                     </ul>
                 </div>
             </div>
-            
+           
             <div class="col-md-8">
                 <div class="product-content-right">
                     <div class="product-breadcroumb">
                         <a href="">Home</a>
-                        <a href="">Category Name</a>
-                        <a href="">Sony Smart TV - 2015</a>
+                        <a href="">Product</a>
+                        <a href="">{{product[0].nama_produk}}</a>
                     </div>
                     
                     <div class="row">
@@ -47,9 +49,10 @@
                         
                         <div class="col-sm-6">
                             <div class="product-inner">
-                                <h2 class="product-name">Sony Smart TV - 2015</h2>
+                                <h2 class="product-name">{{product[0].nama_produk}}</h2>
                                 <div class="product-inner-price">
-                                    <ins>$700.00</ins> <del>$100.00</del>
+                                    <ins>{{product[0].harga_jual | currency: "Rp " : 0}}</ins> 
+                                    <del>{{product[0].harga_jual | currency: "Rp " : 0}}</del>
                                 </div>    
                                 
                                 <form action="" class="cart">
