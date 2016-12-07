@@ -8,7 +8,7 @@
                     <div class="thubmnail-recent" ng-repeat="sp in sideProducts" 
                         ng-init="img=(sp.image1)?imgUrl + sp.image1: imgUrl + 'no-image.png'">
                         <img loaderimg ll-src="{{ img }}" class="recent-thumb" alt="malangsoftware_{{sp.slug}}">
-                        <h2><a href="">{{sp.nama_produk}}</a></h2>
+                        <h2><a href="#/product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
                         <div class="product-sidebar-price">
                             <ins>{{sp.harga_jual | currency: "Rp " : 0}}</ins> 
                             <del>{{sp.harga_jual | currency: "Rp " : 0}}</del>
@@ -36,13 +36,14 @@
                         <div class="col-sm-6">
                             <div class="product-images">
                                 <div class="product-main-img">
-                                    <img src="assets/img/example.png" alt="">
+                                    <!-- <img src="assets/img/example.png" alt=""> -->
+                                    <img src="{{product[0].image1}}" alt="malangsoftware_{{product[0].slug}}">
                                 </div>
                                 
                                 <div class="product-gallery">
-                                    <img src="assets/img/example.png" alt="">
-                                    <img src="assets/img/example.png" alt="">
-                                    <img src="assets/img/example.png" alt="">
+                                    <img src="{{product[0].image2}}" alt="gb2_malangsoftware_{{product[0].slug}}">
+                                    <img src="{{product[0].image3}}" alt="gb3_malangsoftware_{{product[0].slug}}">
+                                    <img src="{{product[0].image4}}" alt="gb4_malangsoftware_{{product[0].slug}}">
                                 </div>
                             </div>
                         </div>
@@ -78,9 +79,7 @@
                                     <div class="tab-content">
                                         <div ng-show="home">
                                             <h2>Product Description</h2>  
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla. Quisque volutpat nulla risus, id maximus ex aliquet ut. Suspendisse potenti. Nulla varius lectus id turpis dignissim porta. Quisque magna arcu, blandit quis felis vehicula, feugiat gravida diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac sodales nisl. Aliquam eget dolor eget elit malesuada aliquet. In varius lorem lorem, semper bibendum lectus lobortis ac.</p>
-
-                                            <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus, non malesuada sem accumsan in. Morbi vel sodales libero.</p>
+                                            <div ng-bind-html="product[0].deskripsi_produk | to_trusted"></div>
                                         </div>
                                         <div ng-show="!home">
                                             <h2>Reviews</h2>
