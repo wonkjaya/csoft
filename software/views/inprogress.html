@@ -7,13 +7,15 @@
                     <h2 class="section-title">Software In Progress</h2>
                     <!-- <div class="product-carousel"> -->
                         <div class="row">
-                            <div class="single-product col-md-3 col-xs-4" 
+                            <div class="single-product col-md-3 col-xs-6" 
                                  style="margin-bottom: 20px" 
-                                 ng-repeat="i in [1,2,3,4]">
-                                <div class="product-f-image text-center" ng-init="img=imgUrl + i.image1">
-                                    <img ng-src="{{ img }}" alt="">
+                                 ng-repeat="i in inprogress">
+                                <div class="product-f-image text-center" 
+                                    ng-init="img=(i.image1)?imgUrl + i.image1:imgUrl + 'no-image.png'">
+                                    <img loaderimg ll-src="{{ img }}" alt="">
                                     <div class="product-hover hidden-xs">
-                                        <a href="#/product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link">
+                                        <a href="#/product/{{i.ID}}/cart/{{i.slug}}.html" 
+                                            class="add-to-cart-link">
                                             <i class="fa fa-shopping-cart"></i> 
                                             <span class="hidden-xs">Add to cart</span>
                                         </a>
@@ -37,9 +39,11 @@
                                 <h2><a href="#/product/{{i.ID}}/{{i.slug}}.html">{{i.nama_produk}}</a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins>{{i.harga_jual | currency: "Rp " : 0}}</ins> 
-                                    <del>{{i.harga_jual | currency: "Rp " : 0}}</del>
-                                </div>  
+                                    <ins class="font-white label label-success col-md-5 col-xs-12">
+                                        {{i.harga_jual | currency: "Rp " : 0}}
+                                    </ins> <br class="show-xs hidden-md hidden-lg">
+                                    <del class="col-md-6 font-white label label-danger col-xs-12">{{i.harga_jual | currency: "Rp " : 0}}</del>
+                                </div> 
                             </div>
                         </div>
                     <!-- </div> -->

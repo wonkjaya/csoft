@@ -1,3 +1,5 @@
+
+.font-white{color:#fff;}
 .floatleft { float: left }
 .floatright { float: right }
 .alignleft {
@@ -16,7 +18,7 @@ a:focus { outline: 0px solid }
 img {
     max-width: 100%;
     height: auto;
-}
+} 
 .fix { overflow: hidden }
 h1,
 h2,
@@ -418,7 +420,8 @@ z-index: 999;}
   text-decoration: none;border-color: #444;
 }
 .product-carousel-price ins {
-  color: #5a88ca;
+  /* color: #5a88ca; */
+  color: #fff;
   font-weight: 700;
   margin-right: 5px;
   text-decoration: none;
@@ -830,6 +833,12 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     color: #fff;
     padding: 6px 25px;display: inline-block
 }
+.callme_button {
+    background: none repeat scroll 0 0 #ec971f;
+    border: medium none;
+    color: #fff;
+    padding: 6px 25px;display: inline-block
+}
 .add_to_cart_button:hover {background-color: #222;color: #fff;text-decoration: none}
 form.cart {
     margin-bottom: 25px;
@@ -861,6 +870,7 @@ form.cart {
 }
 .product-tab li a:hover {
     text-decoration: none;
+    cursor: pointer;
 }
 .product-tab li a:focus {
     text-decoration: none;
