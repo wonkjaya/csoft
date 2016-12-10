@@ -8,7 +8,7 @@
                     <div class="thubmnail-recent" ng-repeat="sp in sideProducts" 
                         ng-init="img=(sp.image1)?imgUrl + sp.image1: imgUrl + 'no-image.png'">
                         <img loaderimg ll-src="{{ img }}" class="recent-thumb" alt="malangsoftware_{{sp.slug}}">
-                        <h2><a href="#/product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
+                        <h2><a href="product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
                         <div class="product-sidebar-price">
                             <ins>{{sp.harga_jual | currency: "Rp " : 0}}</ins> 
                             <del>{{sp.harga_jual | currency: "Rp " : 0}}</del>
@@ -29,7 +29,7 @@
                     <div class="product-breadcroumb">
                         <a href="">Home</a>
                         <a href="#software">Produk</a>
-                        <a href="#/product/{{product[0].ID}}/{{product[0].slug}}.html">{{product[0].nama_produk}}</a>
+                        <a href="product/{{product[0].ID}}/{{product[0].slug}}.html">{{product[0].nama_produk}}</a>
                     </div>
                     
                     <div class="row">
