@@ -104,8 +104,9 @@
                             </div>
                         </div> -->
                         <div class="row" ng-repeat="p in progressProducts">
-                            <div class="col-md-2 text-center">
-                                <img src="assets/img/example.png" alt="" style="width:150px">
+                            <div class="col-md-2 text-center" 
+                                ng-init="imgProg=(p.image1)?imgUrl + p.image1:imgUrl + 'no-image.png'">
+                                <img loaderimg ll-src="{{ imgProg }}" alt="" style="width:150px">
                             </div>
                             <div class="col-md-7">
                                 <h2>{{p.nama_produk}}</h2>
