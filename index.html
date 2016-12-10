@@ -2,12 +2,11 @@
 
 <html lang="en" ng-app="app">
   <head profile="http://www.w3.org/2005/10/profile">
+  <base href="/" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" 
-      type="image/icon" 
-      href="software/favicon.ico">
+    <link rel="icon" type="image/icon" href="software/favicon.ico">
     <title>Malang Software {{title}}</title>
     
     <!-- Google Fonts -->
@@ -45,16 +44,14 @@
                 <div class="col-sm-6">
                     <div class="logo">
                         <h1>
-                            Malang<span style="color:#5a88ca">
-                            Software
-                            </span>
+                            Malang<span style="color:#5a88ca">Software</span>
                         </h1>
                     </div>
                 </div>
                 
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden-xs">
                     <div class="shopping-item">
-                        <a href="#/cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -147,9 +144,9 @@
     </div> End slider area -->
 
 <!-- ng-view -->
-<ui-view>
+<ng-view>
       
-</ui-view>
+</ng-view>
 <!-- /ng-view -->
 
     <div class="brands-area">
@@ -201,12 +198,12 @@
    
     <script src="bower_components/angular/angular.min.js"></script>
     <!-- <script src="bower_components/angular/angular-resource.min.js"></script> -->
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+    <script src="bower_components/angular/angular-route.min.js"></script>
+    <!-- <script src="bower_components/angular-ui/build/angular-ui.min.js"></script> -->
     <script src="bower_components/angular-touch/angular-touch.min.js"></script>
 <!-- modules -->
-    <script src="software/app/modules/controllers/products-app.min.js"></script>
-    <script src="software/app/modules/controllers/products.min.js"></script>
+    <script src="software/app/modules/controllers/ng-products-app.min.js"></script>
+    <script src="software/app/modules/controllers/ng-products.min.js"></script>
 <!-- /modules -->
 
     <script src="software/app/modules/services/factory-services.min.js"></script>
