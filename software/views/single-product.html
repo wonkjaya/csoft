@@ -8,7 +8,7 @@
                     <div class="thubmnail-recent" ng-repeat="sp in sideProducts" 
                         ng-init="img=(sp.image1)?imgUrl + sp.image1: imgUrl + 'no-image.png'">
                         <img loaderimg ll-src="{{ img }}" class="recent-thumb" alt="malangsoftware_{{sp.slug}}">
-                        <h2><a href="product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
+                        <h2><a ng-href="product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
                         <div class="product-sidebar-price">
                             <ins>{{sp.harga_jual | currency: "Rp " : 0}}</ins> 
                             <del>{{sp.harga_jual | currency: "Rp " : 0}}</del>
@@ -19,7 +19,7 @@
                 <div class="single-sidebar">
                     <h2 class="sidebar-title">Blog Terakhir</h2>
                     <ul>
-                        <li ng-repeat="i in [1,2,3,4]"><a href="">....</a></li>
+                        <li ng-repeat="i in [1,2,3,4]"><a ng-href="">....</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,9 +27,9 @@
             <div class="col-md-8">
                 <div class="product-content-right">
                     <div class="product-breadcroumb">
-                        <a href="">Home</a>
-                        <a href="#software">Produk</a>
-                        <a href="product/{{product[0].ID}}/{{product[0].slug}}.html">{{product[0].nama_produk}}</a>
+                        <a ng-href="">Home</a>
+                        <a ng-href="">Produk</a>
+                        <a ng-href="product/{{product[0].ID}}/{{product[0].slug}}.html">{{product[0].nama_produk}}</a>
                     </div>
                     
                     <div class="row">
@@ -65,7 +65,7 @@
                                 </form>   
                                 
                                 <div class="product-inner-category">
-                                    <p>Kategori: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
+                                    <p>Kategori: <a ng-href="">Summer</a>. Tags: <a ng-href="">awesome</a>, <a ng-href="">best</a>, <a ng-href="">sale</a>, <a ng-href="">shoes</a>. </p>
                                 </div> 
                                 
                                 <div role="tabpanel" ng-init="home = true">
