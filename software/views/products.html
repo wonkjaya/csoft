@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="single-product col-md-3 col-xs-6" 
                                  style="margin-bottom: 20px" 
-                                 ng-repeat="i in products">
+                                 ng-repeat="i in products" ng-if="i.slug">
                                 <div class="product-f-image text-center" 
                                     ng-init="img=(i.image1)?imgUrl + i.image1:imgUrl + 'no-image.png'">
                                     <img loaderimg ll-src="{{ img }}" alt="">
