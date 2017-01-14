@@ -1,0 +1,117 @@
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Produk Lain</h2>
+                    <div class="thubmnail-recent" ng-repeat="sp in sideProducts" 
+                        ng-init="img=(sp.image1)?imgUrl + sp.image1: imgUrl + 'no-image.png'">
+                        <img loaderimg ll-src="{{ img }}" class="recent-thumb" alt="malangsoftware_{{sp.slug}}">
+                        <h2><a ng-href="product/{{sp.ID}}/{{sp.slug}}.html">{{sp.nama_produk}}</a></h2>
+                        <div class="product-sidebar-price">
+                            <ins>{{sp.harga_jual | currency: "Rp " : 0}}</ins> 
+                            <del>{{sp.harga_jual | currency: "Rp " : 0}}</del>
+                        </div>                             
+                    </div>
+                </div>
+                
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Blog Terakhir</h2>
+                    <ul>
+                        <li ng-repeat="i in [1,2,3,4]"><a ng-href="">....</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="col-md-8">
+                <div class="product-content-right">
+                    <div class="product-breadcroumb">
+                        <a ng-href="">Home</a>
+                        <a ng-href="">Produk</a>
+                        <a ng-href="product/{{product[0].ID}}/{{product[0].slug}}.html">{{product[0].nama_produk}}</a>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="product-images">
+                                <div class="product-main-img">
+                                    <!-- <img src="assets/img/example.png" alt=""> -->
+                                    <img src="{{product[0].image1}}" alt="malangsoftware_{{product[0].slug}}">
+                                </div>
+                                
+                                <div class="product-gallery">
+                                    <img src="{{product[0].image2}}" alt="gb2_malangsoftware_{{product[0].slug}}">
+                                    <img src="{{product[0].image3}}" alt="gb3_malangsoftware_{{product[0].slug}}">
+                                    <img src="{{product[0].image4}}" alt="gb4_malangsoftware_{{product[0].slug}}">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="product-inner">
+                                <h2 class="product-name">{{product[0].nama_produk}}</h2>
+                                <div class="product-inner-price">
+                                    <ins>{{product[0].harga_jual | currency: "Rp " : 0}}</ins> 
+                                    <del>{{product[0].harga_jual | currency: "Rp " : 0}}</del>
+                                </div>    
+                                
+                                <form action="" class="cart">
+                                    <!-- <div class="quantity">
+                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    </div> -->
+                                    <button class="add_to_cart_button" type="button">Order</button>
+                                    <button class="callme_button" type="button">Hubungi Kami</button>
+                                </form>   
+                                
+                                <div class="product-inner-category">
+                                    <p>Kategori: <a ng-href="">Summer</a>. Tags: <a ng-href="">awesome</a>, <a ng-href="">best</a>, <a ng-href="">sale</a>, <a ng-href="">shoes</a>. </p>
+                                </div> 
+                                
+                                <div role="tabpanel" ng-init="home = true">
+                                    <ul class="product-tab" role="tablist">
+                                        <li role="presentation" class="active" ng-click="home = true">
+                                        	<a aria-controls="home" role="tab" data-toggle="tab" aria-expanded="false">Description</a>
+                                        </li>
+                                        <li role="presentation" class="" ng-click="home = false">
+                                        	<a aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true">Komentar</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div ng-show="home">
+                                            <h2>Deskripsi Produk</h2>  
+                                            <div ng-bind-html="product[0].deskripsi_produk | to_trusted"></div>
+                                        </div>
+                                        <div ng-show="!home">
+                                            <h2>Komentar & Saran</h2>
+                                            <div class="submit-review">
+                                                <p><label for="name">Nama</label> <input name="name" type="text"></p>
+                                                <p><label for="email">Email</label> <input name="email" type="email"></p>
+                                                <div class="rating-chooser">
+                                                    <p>Berbintang</p>
+
+                                                    <div class="rating-wrap-post">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p><label for="review">Masukkan Komentar & Saran</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
+                                                <p><input type="submit" value="Kirim"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>

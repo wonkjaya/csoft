@@ -1,0 +1,128 @@
+<div class="promo-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo1">
+                    <i class="fa fa-refresh"></i>
+                    <p>Pengerjaan Cepat</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo2">
+                    <i class="fa fa-calendar"></i>
+                    <p>Support Selamanya</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo3">
+                    <i class="fa fa-lock"></i>
+                    <p>Server Terpercaya</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="single-promo promo4">
+                    <i class="fa fa-cloud"></i>
+                    <p>Dukungan Cloud</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End promo area -->
+    
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-product">
+                    <h2 class="section-title">Latest Products</h2>
+                    <div class="product-carousel">
+                        <div class="row">
+                            <div class="single-product col-md-3 col-xs-6" 
+                                 style="margin-bottom: 20px" 
+                                 ng-repeat="i in products">
+                                <div class="product-f-image text-center" 
+                                    ng-init="img=(i.image1)?imgUrl + i.image1:imgUrl + 'no-image.png'">
+                                    <img loaderimg ll-src="{{ img }}" alt="">
+                                    <div class="product-hover hidden-xs">
+                                        <a ng-href="product/{{i.ID}}/cart/{{i.slug}}.html" 
+                                            class="add-to-cart-link">
+                                            <i class="fa fa-shopping-cart"></i> 
+                                            <span class="hidden-xs">Add to cart</span>
+                                        </a>
+                                        <a ng-href="product/{{i.ID}}/{{i.slug}}.html" 
+                                            class="view-details-link">
+                                            <i class="fa fa-link"></i> 
+                                            <span class="hidden-xs">See details</span>
+                                        </a>
+                                    </div>
+                                    <div class="product-hover visible-xs">
+                                        <a ng-href="product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link xs">
+                                            <i class="fa fa-shopping-cart"></i> 
+                                        </a>
+                                        <a ng-href="product/{{i.ID}}/{{i.slug}}.html" class="add-to-cart-link xs view" 
+                                            style="margin-right:40px">
+                                            <i class="fa fa-link"></i> 
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <h2><a ng-href="product/{{i.ID}}/{{i.slug}}.html">{{i.nama_produk}}</a></h2>
+                                
+                                <div class="product-carousel-price">
+                                    <ins class="font-white label label-success col-md-5 col-xs-12">
+                                        {{i.harga_jual | currency: "Rp " : 0}}
+                                    </ins> <br class="show-xs hidden-md hidden-lg">
+                                    <del class="col-md-6 font-white label label-danger col-xs-12">{{i.harga_jual | currency: "Rp " : 0}}</del>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="col-md-12">
+                <hr/>
+                <div class="latest-product">
+                    <h2 class="section-title">Software In Progress</h2>
+                    <div class="product-carousel">
+                        <!-- <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img src="assets/img/example.png" alt="" style="width:150px">
+                            </div>
+                            <div class="col-md-7">
+                                <h2>Software Kas sekolah</h2>
+                                <hr/>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                    <span class="sr-only">45% Complete</span>
+                                  </div>
+                                </div>
+                                <button class="btn btn-warning btn-xs">More Info</button>
+                            </div>
+                        </div> -->
+                        <div class="row" ng-repeat="p in progressProducts">
+                            <div class="col-md-2 text-center" 
+                                ng-init="imgProg=(p.image1)?imgUrl + p.image1:imgUrl + 'no-image.png'">
+                                <img loaderimg ll-src="{{ imgProg }}" alt="" style="width:150px">
+                            </div>
+                            <div class="col-md-7">
+                                <h2>{{p.nama_produk}}</h2>
+                                <hr/>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" 
+                                      aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" 
+                                      style="width: {{p.progress_val}}%">
+                                  </div>
+                                </div>
+                                <button class="btn btn-warning btn-xs">More Info</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End main content area -->
