@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_Recordset1" value="name:no;datatype:int,name:no_rm;datatype:int,name:nama;datatype:string,name:umur;datatype:int,name:alamat;datatype:blob,name:jenis_kelamin;datatype:string,name:jenis_pasien;datatype:string,name:dokter;datatype:string,name:kategori;datatype:string,name:sub_kategori;datatype:string,name:pemeriksaan;datatype:string,name:pembayaran;datatype:int,name:tanggal;datatype:blob,name:hasil;datatype:blob" />
-</info>
