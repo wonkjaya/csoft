@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fragment" content="!">
     <link rel="icon" type="image/icon" href="software/favicon.ico">
+    <link rel="alternate" href="https://malangsoftware.com/" hreflang="id" />
     <title ng-bind="title"></title>
     
     <!-- Google Fonts -->
     <!-- <link href='software/assets/css/google/Titillium+Web:400,200,300,700,600.css' rel='stylesheet' type='text/css'>
     <link href='software/assets/css/google/Roboto+Condensed:400,700,300.css' rel='stylesheet' type='text/css'> -->
-
     <link href='software/assets/css/google/Raleway:400,100.css' rel='stylesheet' type='text/css'>
     
     <!-- Bootstrap -->
@@ -50,7 +51,6 @@
                     </div>
                 </div>
                 
-
                 <div class="col-sm-6 hidden-xs">
                     <div class="shopping-item">
                         <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
@@ -74,8 +74,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="{{m.class}}" ng-repeat="m in menu">
-                            <a href="{{m.link}}">
-                                {{m.title}}
+                            <a href="{{m.link}}" ng-bind="m.title">
                             </a>
                         </li>
                         <li class="visible-xs">
@@ -158,7 +157,6 @@
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
-
                             <img src="software/assets/img/brands/nodejs.png" alt="malangsoftware_nodejs_development">
                             <img src="software/assets/img/brands/php.png" alt="malangsoftware_php_development">
                             <img src="software/assets/img/brands/html5.png" alt="malangsoftware_html5_development">
@@ -207,7 +205,6 @@
 <!-- modules -->
     <script src="software/app/modules/controllers/ng-products-app.min.js"></script>
     <script src="software/app/modules/controllers/ng-products.min.js"></script>
-
 <!-- /modules -->
 
     <script src="software/app/modules/services/factory-services.min.js"></script>

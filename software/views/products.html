@@ -9,34 +9,34 @@
                         <div class="row">
                             <div class="single-product col-md-3 col-xs-6" 
                                  style="margin-bottom: 20px" 
-                                 ng-repeat="i in products">
+                                 ng-repeat="i in products" ng-if="i.slug">
                                 <div class="product-f-image text-center" 
                                     ng-init="img=(i.image1)?imgUrl + i.image1:imgUrl + 'no-image.png'">
                                     <img loaderimg ll-src="{{ img }}" alt="">
                                     <div class="product-hover hidden-xs">
-                                        <a href="product/{{i.ID}}/cart/{{i.slug}}.html" 
+                                        <a ng-href="product/{{i.ID}}/cart/{{i.slug}}.html" 
                                             class="add-to-cart-link">
                                             <i class="fa fa-shopping-cart"></i> 
                                             <span class="hidden-xs">Add to cart</span>
                                         </a>
-                                        <a href="product/{{i.ID}}/{{i.slug}}.html" 
+                                        <a ng-href="product/{{i.ID}}/{{i.slug}}.html" 
                                             class="view-details-link">
                                             <i class="fa fa-link"></i> 
                                             <span class="hidden-xs">See details</span>
                                         </a>
                                     </div>
                                     <div class="product-hover visible-xs">
-                                        <a href="product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link xs">
+                                        <a ng-href="product/{{i.ID}}/cart/{{i.slug}}.html" class="add-to-cart-link xs">
                                             <i class="fa fa-shopping-cart"></i> 
                                         </a>
-                                        <a href="product/{{i.ID}}/{{i.slug}}.html" class="add-to-cart-link xs view" 
+                                        <a ng-href="product/{{i.ID}}/{{i.slug}}.html" class="add-to-cart-link xs view" 
                                             style="margin-right:40px">
                                             <i class="fa fa-link"></i> 
                                         </a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="product/{{i.ID}}/{{i.slug}}.html">{{i.nama_produk}}</a></h2>
+                                <h2><a ng-href="product/{{i.ID}}/{{i.slug}}.html">{{i.nama_produk}}</a></h2>
                                 
                                 <div class="product-carousel-price">
                                     <ins class="font-white label label-success col-md-5 col-xs-12">
