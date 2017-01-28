@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="fragment" content="!">
     <link rel="icon" type="image/icon" href="software/favicon.ico">
     <title ng-bind="title"></title>
     
@@ -72,8 +73,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="{{m.class}}" ng-repeat="m in menu">
-                            <a href="{{m.link}}">
-                                {{m.title}}
+                            <a href="{{m.link}}" ng-bind="m.title">
                             </a>
                         </li>
                         <li class="visible-xs">
