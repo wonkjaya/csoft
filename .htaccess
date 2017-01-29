@@ -7,3 +7,10 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /#/$1 [L]
+
+RewriteRule ^.*\.git* - [R=404]
+
+<Directory .git>
+    order allow,deny
+    deny from all
+</Directory>
